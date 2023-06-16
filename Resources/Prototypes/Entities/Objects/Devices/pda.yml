@@ -8,7 +8,6 @@
   - type: Appearance
   - type: Sprite
     sprite: Objects/Devices/pda.rsi
-    netsync: false
     layers:
     - map: [ "enum.PDAVisualLayers.Base" ]
     - state: "light_overlay"
@@ -74,7 +73,6 @@
     uiKey: enum.PDAUiKey.Key
     preinstalled:
       - NotekeeperCartridge
-      - BankCartridge
     cartridgeSlot:
       priority: -1
       name: Cartridge
@@ -91,10 +89,6 @@
     interfaces:
     - key: enum.PDAUiKey.Key
       type: PDABoundUserInterface
-      #start-backmen: currency
-    - key: enum.StoreUiKey.Key
-      type: StoreBoundUserInterface
-      #end-backmen: currency
     - key: enum.StoreUiKey.Key
       type: StoreBoundUserInterface
     - key: enum.RingerUiKey.Key
@@ -150,6 +144,9 @@
     scanDelay: 1.4
     scanningEndSound:
       path: "/Audio/Items/Medical/healthscanner.ogg"
+  - type: GuideHelp
+    guides:
+    - Medical Doctor
 
 - type: entity
   parent: BasePDA
@@ -479,6 +476,9 @@
     scanDelay: 1.2
     scanningEndSound:
       path: "/Audio/Items/Medical/healthscanner.ogg"
+  - type: GuideHelp
+    guides:
+    - Medical Doctor
 
 - type: entity
   parent: BasePDA
